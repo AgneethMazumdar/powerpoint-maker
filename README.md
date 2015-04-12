@@ -15,4 +15,4 @@ Installing Python-pptx using pip comes with several dependencies (including Pill
 
 # File Input and Downloading Images
 
-It is expected that the first column of your csv file is filled with a title and that the cell in each adjacent cell contains a direct link to an image. Note that if you have an already existing file with the same name as one of your titles (minus any spaces) you may want to either change the file or title name or move the file to a different folder so that it doesn't get overwritten by the image from the link that the script downloads.
+It is expected that the first column of your csv file is filled with titles and that each of the corresponding adjacent cells contain a direct link to an image. Note that if you have an already existing file with the same name as one of your titles (minus any spaces) you may want to either change the file or title name or move the file to a different folder so that it doesn't get overwritten by the image from the link that the script downloads.
