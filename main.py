@@ -64,7 +64,6 @@ def original_names(dictionary):
 
     return preserved_names 
 
-
 def make_slides(names_list, original_names, counter):
 
     names = names_list 
