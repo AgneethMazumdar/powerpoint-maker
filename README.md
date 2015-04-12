@@ -4,7 +4,7 @@ This script is designed to create a microsoft powerpoint presentation from a lis
 
 # Requirements
 
-*Microsoft Powerpoint
-*Python 2.7 
-*Python PPTX
-*Pillow 
+* Microsoft Powerpoint
+* Python 2.7 
+* Python PPTX
+* Pillow 
