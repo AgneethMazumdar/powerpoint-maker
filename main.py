@@ -8,8 +8,6 @@ import urllib
 import os
 import csv
 
-prs = Presentation()
-
 def read_csv():
 
     names = []
@@ -64,7 +62,9 @@ def original_names(dictionary):
 
     return preserved_names 
 
-def make_slides(names_list, original_names, counter):
+def make_slides(powerpoint, names_list, original_names, counter):
+
+    prs = powerpoint
 
     names = names_list 
     old_names = original_names
@@ -86,6 +86,8 @@ def make_slides(names_list, original_names, counter):
 
 def main():
 
+    prs = Presentation()
+
     names, urls, names_plus_images = read_csv()
     
     new_names = add_jpg_to_image_names(names)
@@ -95,7 +97,7 @@ def main():
     retrieved_names, urls, names_plus_images = read_csv()
 
     for index, val in enumerate(names):
-        make_slides(names, retrieved_names, index)
+        make_slides(prs, names, retrieved_names, index)
 
 if __name__ == "__main__":
     main()
