@@ -24,10 +24,8 @@ def read_csv():
 
     return names, urls, names_plus_images
 
-def add_jpg_to_image_names(names_list):
+def add_jpg_to_image_names(extended_names):
 	
-    extended_names = names_list 
-
     for index, val in enumerate(extended_names):
         if ' ' in extended_names[index]:
             extended_names[index] = extended_names[index].replace(' ', '');
@@ -37,10 +35,7 @@ def add_jpg_to_image_names(names_list):
     
     return extended_names
         
-def download_images(names_list, urls_list):
-
-    names = names_list 
-    urls = urls_list
+def download_images(names, urls):
 
     for index, val in enumerate(names):
         urllib.urlretrieve(urls[index], names[index]) 
@@ -51,10 +46,8 @@ def download_images(names_list, urls_list):
 
     return names
 
-def original_names(dictionary):
+def original_names(names_plus_images):
     
-    names_plus_images = dictionary
-
     preserved_names = []
 
     for index, key in enumerate(names_plus_images):
@@ -62,13 +55,7 @@ def original_names(dictionary):
 
     return preserved_names 
 
-def make_slides(powerpoint, names_list, original_names, counter):
-
-    prs = powerpoint
-
-    names = names_list 
-    old_names = original_names
-    index = counter
+def make_slides(prs, names, old_names, index):
        
     title_only_slide_layout = prs.slide_layouts[5]
     slide = prs.slides.add_slide(title_only_slide_layout)
